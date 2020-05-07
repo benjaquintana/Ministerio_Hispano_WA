@@ -123,13 +123,13 @@ body {
 }
 @media (min-width: 768px) {
   .contenedor {
-    width: 90%;    
+    width: 90%;
   }
 }
 @media (min-width: 992px) {
   .contenedor {
     width: 90%;
-    max-width: 1100px;    
+    max-width: 1100px;
   }
 }
 img {
@@ -164,7 +164,7 @@ h4 {
 
 /* Utilidades */
 :root {
-  --primario:rgb(20, 83, 81);   
+  --primario:rgb(20, 83, 81);
   --primarioClaro: rgb(44, 188, 164);
   --secundarioClaro:  rgb(220, 163, 21);
   --secundario:  rgb(105, 42, 0);
@@ -243,11 +243,11 @@ ul {
 }
 
 /* Dropdown Button*/
-.dropbtn {   
+.dropbtn {
   color: #ffffff;
   text-decoration: none;
-} 
-.dropbtn:hover {   
+}
+.dropbtn:hover {
   color: #ffffff;
   text-decoration: none;
 }
@@ -275,7 +275,7 @@ ul {
 }
 .boton_primario:hover .dropdown-content {
   display: block;
-} 
+}
 
 /* Navegación */
 .navegador_principal {
@@ -376,8 +376,8 @@ div.detalle_evento p i {
 }
 div.ocultar {
   display: none;
-}   
-   
+}
+
 /* Cuenta Regresiva */
 div.cuenta_regresiva {
   padding: 4rem 0;
@@ -395,7 +395,7 @@ div.contenido_cuenta_regresiva ul li {
     width: 25%;
     float: left;
   }
-} 
+}
 p.numero {
   font-family: 'Oswald', sans-serif;
   color: var(--secundarioOscuro);
@@ -519,8 +519,8 @@ div.mapa {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
   z-index: 1;
   margin-bottom: 5rem;
-}   
-  
+}
+
 /* Estudie con Nosotros */
 .estudio {
   position: relative;
@@ -573,7 +573,7 @@ section.ministerios {
 }
 div.contenedor_video_ministerios {
   max-width: 100%;
-  height: auto;
+  height: 60rem;
   overflow-x: hidden;
 }
 div.contenido_ministerios {
@@ -650,8 +650,8 @@ div.detalle_ministerio p i {
 }
 div.ocultar {
   display: none;
-}   
-  
+}
+
 /* Footer */
 footer {
   background-color: var(--primario);
