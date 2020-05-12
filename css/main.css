@@ -469,10 +469,8 @@ div.mapa {
 }
 @media (min-width: 768px){
   .contenido_eventos h3 {
-
- {
-  margin: 2rem 0 4rem 0;
-  text-align: left;
+    margin: 2rem 0 4rem 0;
+    text-align: left;
 }
 .lista_reproduccion {
   display: flex;
