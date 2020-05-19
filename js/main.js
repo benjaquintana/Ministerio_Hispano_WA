@@ -2,7 +2,7 @@
     "use strict";
     var regalo = document.getElementById('regalo');
 
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function() {
 
         //Campo Datos Usuario
         var nombre = document.getElementById('nombre');
@@ -42,7 +42,7 @@
                 errorDiv.innerHTML= 'Este campo es obligatorio';
                 this.style.border= '1px solid red';
                 errorDiv.style.border= '1px solid red';
-            } 
+            }
             else {
                 errorDiv.style.display= 'none';
                 this.style.border= '1px solid #cccccc';
@@ -67,7 +67,7 @@
             if(regalo.value === '') {
                 alert("Debes elegir un regalo");
                 regalo.focus();
-            } 
+            }
             else {
                 var boletosDia = parseInt (pase_dia.value, 10) || 0,
                     boletos2Dias = parseInt (pase_dosdias.value, 10) || 0,
@@ -76,7 +76,7 @@
                     cantEtiquetas = parseInt (etiquetas.value, 10) || 0;
 
                 var totalPagar = (boletosDia * 30) + (boletos2Dias * 45) + (boletosCompletos * 50) + ((cantCamisas * 10) * .93) + (cantEtiquetas * 2);
-               
+
                 var listadoProductos = [];
                 if(boletosDia >= 1) {
                     listadoProductos.push(boletosDia + ' Pase por Día');
@@ -128,8 +128,13 @@
     })
 })();
 
-$(function(){
-    
+$(function() {
+
+   //Menu Responsive
+    $('.menu_movil').on('click', function() {
+      $('.navegacion_principal').slideToggle();
+    });
+
     //Programa de Conferencia
     $('.programa_evento .info_curso:first').show();
     $('.menu_programa a:first').addClass('activo');
@@ -149,7 +154,7 @@ $(function(){
         $('#minutos').html(event.strftime('%M'));
         $('#segundos').html(event.strftime('%S'));
     });
-        
+
     //Campo de mapa
     var map = L.map('mapa').setView([47.2829,-122.3324], 13);
 

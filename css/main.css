@@ -202,17 +202,21 @@ ul {
 /* Botones */
 .boton {
   display: block;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 1rem 2rem;
   margin: 0 .1rem;
   text-decoration: none;
   position: relative;
 }
+@media (min-width: 768px) {
+  .boton {
+    display: block;
+  }
+}
 .boton_primario {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.6rem;
-  display: inline-block;
   text-align: center;
   padding: 1rem 2rem;
   transition: all .5s;
@@ -246,10 +250,12 @@ ul {
 .dropbtn {
   color: #ffffff;
   text-decoration: none;
+  margin: 0;
 }
 .dropbtn:hover {
   color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 }
 .dropdown-content {
   display: none;
@@ -260,6 +266,7 @@ ul {
   min-width: 30rem;
   box-shadow: 0 0.8 1.6rem 0 rgba(0,0,0,0.2);
   z-index: 1;
+  border: 1px solid var(--primarioClaro)
 }
 .dropdown-content a {
   float: none;
@@ -302,21 +309,52 @@ header {
   width: 10rem;
 }
 
-/*Carousell*/
-
 /* Navegación */
-.navegador_principal {
+div.navegacion {
   background-color: var(--primario);
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 2;
-  text-transform: uppercase;
+  margin: 0;
 }
-.contenido_navegacion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/*Menu Movil*/
+div.menu_movil {
+  color: #ffffff;
+  text-align: center;
+  padding: .5rem;
+}
+@media (min-width: 998px) {
+  div.menu_movil {
+    display: none;
+  }
+}
+div.menu_movil:hover {
+  cursor: pointer;
+}
+div.menu_movil p {
+ font-size: 2.8rem;
+ margin: 0;
+}
+
+/* Navegacion Principal */
+nav.navegacion_principal {
+  display: none;
+  width: 100%;
+}
+@media (min-width: 998px) {
+  nav.navegacion_principal {
+    display: block;
+  }
+}
+@media (min-width: 998px) {
+  .contenido_navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .nav_activo {
   background-color: var(--primarioClaro);
@@ -500,14 +538,23 @@ div.mapa {
   }
 }
 .lista_reproduccion {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .lista_reproduccion {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 998px) {
+  .lista_reproduccion {
+    grid-template-columns: repeat(4 , 1fr);
+  }
 }
 .lista_reproduccion iframe {
-  width: 26rem;
-  height: 15rem;
+  align-items: center;
 }
 
 /* Vidas Transformadas */
